@@ -3,6 +3,30 @@
         <HEAD>
                 <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-8">
                 <TITLE>Mi primera página</TITLE>
+                <button id="titulo">Titulo</button>
+
+                <p>The text content of the button is:</p>
+                <p id="demo"></p>
+                
+                <script>
+                let text = document.getElementById("titulo").textContent;
+                document.getElementById("demo").innerHTML = text;  
+                </script>
+
+                <img src="#" id="imagen">
+                <br><br><br>
+
+                <a href="#" text></a>
+                
+<a href="#" id="demo" onclick="myFunction()">Click me to change my textual content.</a>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").textContent = "I have changed!";
+}
+</script>
+
+
                 <META NAME="GENERATOR" CONTENT="OpenOffice.org 1.0  (Win32)">
                 <META NAME="AUTHOR" CONTENT="">
                 <META NAME="CREATED" CONTENT="">
@@ -12,7 +36,7 @@
         </HEAD>
         <BODY LANG="es-ES" class="container text-center">
                 <H1>
-                        <IMG ID="imagen5" SRC="../imagenes/BD1.gif" NAME="Imagen1" ALIGN=CENTER WIDTH=700 HEIGHT=50><BR CLEAR=LEFT><BR><BR>
+                        <IMG ID="imagen5" SRC="../imagenes/BD1.jpg" NAME="Imagen1" ALIGN=CENTER WIDTH=700 HEIGHT=50><BR CLEAR=LEFT><BR><BR>
                 </H1>
                 <!--
                         <H1 ID="titulo5">Mi primera página HTML</H1>
