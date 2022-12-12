@@ -12,7 +12,7 @@
         </HEAD>
         <BODY LANG="es-ES" class="container text-center">
                 <H1>
-                        <IMG ID="imagen5" SRC="../imagenes/BD1.gif" NAME="Imagen1" ALIGN=CENTER WIDTH=700 HEIGHT=50><BR CLEAR=LEFT><BR><BR>
+                        <IMG ID="titulo" SRC="../imagenes/BD1.gif" NAME="Imagen1" ALIGN=CENTER WIDTH=700 HEIGHT=50><BR CLEAR=LEFT><BR><BR>
                 </H1>
                 <!--
                         <H1 ID="titulo5">Mi primera página HTML</H1>
@@ -20,6 +20,11 @@
                         <BR><BR>
                 </P>
                 -->
+
+                <img id="imagen" src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+                <a id="enlace" href="https://www.w3schools.com" target="_blank">Visit W3Schools.com!</a>
+
                 <div class="row text-center">
                         <div class="col-md-6">
                                 <span>&larr;</span><A HREF="pagina4.html">Mi cuarta página HTML</A>
@@ -29,5 +34,22 @@
                         </div>
                 </div>
                 <P></P>
+
+                <script>
+                        function MyGeeks() 
+                        {
+                            document.getElementById("titulo").textContent
+                            = "Welcome to GeeksforGeeks!";
+                        }
+
+                        function MyGeeks() 
+                        {
+                            document.getElementById("enlace").textContent
+                            = "Welcome to GeeksforGeeks!";
+                        }                      
+                </script>
+
+
+
         </BODY>
 </HTML>
