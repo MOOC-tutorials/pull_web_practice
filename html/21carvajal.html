@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  
+  <title>Proyecto git: Contribución a un proyecto (creación de una petición de validación - Pull Request)</title>
+  <link rel="stylesheet" href="./21carvajal_files/css">
+  <link rel="stylesheet" href="./21carvajal_files/icon">
+  <link rel="stylesheet" href="./21carvajal_files/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+<script src="./21carvajal_files/analytics.js.download"></script></head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" environment="web" category="null"></google-codelab-analytics>
+  <google-codelab codelab-gaid="" id="git_web_practice_pr" environment="web" feedback-link="https://github.com/MOOC-tutorials/pull_web_practice" selected="3" google-codelab-ready="" codelab-title="Proyecto git: Contribución a un proyecto (creación de una petición de validación - Pull Request)" anayltics-ready="anayltics-ready"><div id="drawer"><div class="steps"><ol><li completed=""><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#0"><span class="step"><span>Introducción al proyecto y pasos previos</span></span></a></li><li completed=""><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#1"><span class="step"><span>Configuración del ambiente de desarrollo</span></span></a></li><li completed=""><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#2"><span class="step"><span>Contribuyendo al proyecto: Parte 1</span></span></a></li><li completed="" selected=""><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#3"><span class="step"><span>Contribuyendo al proyecto: Parte 2</span></span></a></li></ol></div><div class="metadata"><a target="_blank" href="https://github.com/MOOC-tutorials/pull_web_practice"><i class="material-icons">bug_report</i> Report a mistake</a></div></div><div id="codelab-title"><div id="codelab-nav-buttons"><a href="https://misovirtual.virtual.uniandes.edu.co/" id="arrow-back"><i class="material-icons">close</i></a><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#" id="menu"><i class="material-icons">menu</i></a></div><h1 class="title">Proyecto git: Contribución a un proyecto (creación de una petición de validación - Pull Request)</h1><div id="codelab-time-container"><div id="time-remaining" title="Time remaining"><i class="material-icons">access_time</i>15 mins remaining</div></div><devsite-user></devsite-user></div><div id="main"><div id="steps"><google-codelab-step label="Introducción al proyecto y pasos previos" duration="5" step="1" style="transform: translate3d(-110%, 0px, 0px);"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">1. Introducción al proyecto y pasos previos</h2>
+        <p>En este proyecto vamos a practicar la contribución a un repositorio que contiene un sitio web estático. La tarea consiste en realizar una contribución a un repositorio y más puntualmente realizar una petición de validación (<em>pull request</em>) para agregar una página. El sitio web estático es un conjunto de páginas HTML, y es un proyecto público abierto a contribuciones de cualquier persona.</p>
+<p>El código se encuentra disponible en Github y a continuación se explica brevemente la configuración del ambiente de desarrollo necesaria para comenzar a trabajar. Posteriormente se explica la dinámica de trabajo sobre el repositorio y lo que se espera realizar en conjunto con el equipo automático.</p>
+<h2 is-upgraded=""><strong>Antes de comenzar</strong></h2>
+<ul>
+<li>Asegúrese de tener una <a href="https://github.com/" target="_blank">cuenta en Github</a> y tener la sesión iniciada.</li>
+<li>Asegurese de tener <a href="https://git-scm.com/download" target="_blank">Git </a>instalado.</li>
+<li>Se recomienda usar algún editor de archivos con manejo de sintaxis. Una opción recomendada es usar <a href="https://code.visualstudio.com/Download" target="_blank">Visual Studio Code</a>.</li>
+</ul>
+
+
+      </div></div></google-codelab-step><google-codelab-step label="Configuración del ambiente de desarrollo" duration="0" step="2" style="transform: translate3d(-110%, 0px, 0px);"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">2. Configuración del ambiente de desarrollo</h2>
+        <h2 is-upgraded=""><strong>Primeros pasos</strong></h2>
+<ul>
+<li>Ir a <a href="https://github.com/MOOC-tutorials/pull_web_practice" target="_blank">https://github.com/MOOC-tutorials/pull_web_practice</a></li>
+<li>Dar clic sobre el botón de <img style="width: 58.00px" src="./21carvajal_files/88b0928d30358aba.png"></li>
+<li>Confirmar que ahora tenga dentro de su cuenta un nuevo repositorio con el sitio web estático base con el nombre <strong><em>pull_web_practice</em></strong></li>
+</ul>
+<h2 is-upgraded=""><strong>Clonando el repositorio</strong></h2>
+<ul>
+<li>En su repositorio <strong><em>pull_web_practice </em></strong>en Github, hacer clic en <img style="width: 133.00px" src="./21carvajal_files/425952c7975a747d.png"></li>
+<li>Copiar la URL dada. Puede usar el botón<img style="width: 36.00px" src="./21carvajal_files/dc95111c186090c8.png"> (este botón copiará en su portapapeles la URL que se necesita).</li>
+<li>En su terminal/consola ubicarse en el directorio en que desea que se clone el repositorio usando el comando <code>cd</code>.</li>
+<li>En su terminal/consola escribir <code>git clone &lt;URL del repositorio&gt;</code>.</li>
+<li>Cambiar el directorio activo (<code>cd</code>) a la carpeta raíz del repositorio. Ejecutando <code>cd pull_web_practice</code> debería bastar.</li>
+</ul>
+
+
+      </div></div></google-codelab-step><google-codelab-step label="Contribuyendo al proyecto: Parte 1" duration="15" step="3" style="transform: translate3d(-110%, 0px, 0px);"><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">3. Contribuyendo al proyecto: Parte 1</h2>
+        <p>En este momento debería de contar con una copia local del repositorio con el código de la página web estática. Partiendo de esto ahora podrá hacer los cambios necesarios para realizar una contribución al proyecto. La idea general es crear una nueva página HTML que cuente con unas características mínimas para poder ser aceptable. Al realizar las modificaciones es necesario hacer un <strong><em>commit </em></strong>de las mismas, además de subir los cambios locales mediante un <strong><em>push</em></strong> al repositorio remoto.</p>
+<h2 is-upgraded=""><strong>Instrucciones sobre la contribución</strong></h2>
+<p>Como se mencionó, la contribución a realizar es añadir una página HTML. A continuación se muestra una base de página con los elementos mínimos que la misma necesita para ser aceptada:</p>
+<pre><code><span class="dec">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"&gt;</span><span class="pln">
+</span><span class="tag">&lt;HTML&gt;</span><span class="pln">
+        </span><span class="tag">&lt;HEAD&gt;</span><span class="pln">
+                </span><span class="tag">&lt;META</span><span class="pln"> </span><span class="atn">HTTP-EQUIV</span><span class="pun">=</span><span class="atv">"CONTENT-TYPE"</span><span class="pln"> </span><span class="atn">CONTENT</span><span class="pun">=</span><span class="atv">"text/html; charset=UTF-8"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;TITLE&gt;</span><span class="pln">Mi primera página</span><span class="tag">&lt;/TITLE&gt;</span><span class="pln">
+                </span><span class="tag">&lt;META</span><span class="pln"> </span><span class="atn">NAME</span><span class="pun">=</span><span class="atv">"GENERATOR"</span><span class="pln"> </span><span class="atn">CONTENT</span><span class="pun">=</span><span class="atv">"OpenOffice.org 1.0  (Win32)"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;META</span><span class="pln"> </span><span class="atn">NAME</span><span class="pun">=</span><span class="atv">"AUTHOR"</span><span class="pln"> </span><span class="atn">CONTENT</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;META</span><span class="pln"> </span><span class="atn">NAME</span><span class="pun">=</span><span class="atv">"CREATED"</span><span class="pln"> </span><span class="atn">CONTENT</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;META</span><span class="pln"> </span><span class="atn">NAME</span><span class="pun">=</span><span class="atv">"CHANGEDBY"</span><span class="pln"> </span><span class="atn">CONTENT</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;META</span><span class="pln"> </span><span class="atn">NAME</span><span class="pun">=</span><span class="atv">"CHANGED"</span><span class="pln"> </span><span class="atn">CONTENT</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span><span class="pln"> </span><span class="atn">integrity</span><span class="pun">=</span><span class="atv">"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"</span><span class="pln"> </span><span class="atn">crossorigin</span><span class="pun">=</span><span class="atv">"anonymous"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/HEAD&gt;</span><span class="pln">
+        </span><span class="tag">&lt;BODY</span><span class="pln"> </span><span class="atn">LANG</span><span class="pun">=</span><span class="atv">"es-ES"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"container text-center"</span><span class="tag">&gt;</span><span class="pln">
+                </span><span class="tag">&lt;H1&gt;</span><span class="pln">
+                        </span><span class="tag">&lt;IMG</span><span class="pln"> </span><span class="atn">ID</span><span class="pun">=</span><span class="atv">"imagen5"</span><span class="pln"> </span><span class="atn">SRC</span><span class="pun">=</span><span class="atv">"../imagenes/BD1.gif"</span><span class="pln"> </span><span class="atn">NAME</span><span class="pun">=</span><span class="atv">"Imagen1"</span><span class="pln"> </span><span class="atn">ALIGN</span><span class="pun">=</span><span class="atv">CENTER</span><span class="pln"> </span><span class="atn">WIDTH</span><span class="pun">=</span><span class="atv">700</span><span class="pln"> </span><span class="atn">HEIGHT</span><span class="pun">=</span><span class="atv">50</span><span class="tag">&gt;&lt;BR</span><span class="pln"> </span><span class="atn">CLEAR</span><span class="pun">=</span><span class="atv">LEFT</span><span class="tag">&gt;&lt;BR&gt;&lt;BR&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/H1&gt;</span><span class="pln">
+                </span><span class="com">&lt;!--
+                        &lt;H1 ID="titulo5"&gt;Mi primera página HTML&lt;/H1&gt;
+                &lt;P&gt;
+                        &lt;BR&gt;&lt;BR&gt;
+                &lt;/P&gt;
+                --&gt;</span><span class="pln">
+                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row text-center"</span><span class="tag">&gt;</span><span class="pln">
+                        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"col-md-6"</span><span class="tag">&gt;</span><span class="pln">
+                                </span><span class="tag">&lt;span&gt;</span><span class="pln">&amp;larr;</span><span class="tag">&lt;/span&gt;&lt;A</span><span class="pln"> </span><span class="atn">HREF</span><span class="pun">=</span><span class="atv">"pagina4.html"</span><span class="tag">&gt;</span><span class="pln">Mi cuarta página HTML</span><span class="tag">&lt;/A&gt;</span><span class="pln">
+                        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"col-md-6"</span><span class="tag">&gt;</span><span class="pln">
+                                </span><span class="tag">&lt;A</span><span class="pln"> </span><span class="atn">ID</span><span class="pun">=</span><span class="atv">"enlace5"</span><span class="pln"> </span><span class="atn">HREF</span><span class="pun">=</span><span class="atv">"pagina2.html"</span><span class="tag">&gt;</span><span class="pln">Mi segunda página HTML</span><span class="tag">&lt;/A&gt;&lt;span&gt;</span><span class="pln">&amp;rarr;</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+                        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+                </span><span class="tag">&lt;P&gt;&lt;/P&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/BODY&gt;</span><span class="pln">
+</span><span class="tag">&lt;/HTML&gt;</span></code></pre>
+<p><strong>Conociendo las características necesarias para una contribución</strong></p>
+<p>Partiendo del ejemplo anterior, agregue una nueva página que siga una estructura similar, realice <strong><em>commit </em></strong>y<strong><em> push </em></strong>de sus cambios, y realice una petición de validación de cambios (<strong><em>pull request</em></strong>) al repositorio original en <a href="https://github.com/MOOC-tutorials/pull_web_practice" target="_blank">https://github.com/MOOC-tutorials/pull_web_practice</a> . Cabe aclarar que la estructura base no es del todo correcta, pero igualmente se pide realizar la contribución inicialmente con la misma para observar la retroalimentación y los requerimientos mínimos que la contribución debe seguir para ser considerada correcta.</p>
+<p>Por ejemplo, al realizar cambios en su fork podrá ver un mensaje como el siguiente que le ayudará a crear la petición (dependiendo de si se hace uso de una rama):</p>
+<p class="image-container"><img style="width: 624.00px" src="./21carvajal_files/b71649b8eb04c360.png"></p>
+<p>O mediante el botón<strong>: </strong><img style="width: 111.00px" src="./21carvajal_files/8eb5ce8bcf95afdf.png"><strong> </strong></p>
+<p>Realizando una selección con <strong><em>base </em></strong>y <strong><em>head </em></strong>similar al siguiente:</p>
+<p class="image-container"><img style="width: 624.00px" src="./21carvajal_files/1ac588eb70e30a2.png"></p>
+<p><strong>NOTA: Tenga en cuenta que esta contribución inicial se realiza para conocer qué elementos son necesarios para su aceptación. De esta manera, la contribución que se sugiere realizar no será aceptada de inmediato y por el contrario se le informará las condiciones en las que podría ser aceptada (más detalles en la Parte 2).</strong></p>
+
+
+      </div></div></google-codelab-step><google-codelab-step label="Contribuyendo al proyecto: Parte 2" duration="15" step="4" style="transform: translate3d(0px, 0px, 0px);" selected=""><div class="instructions"><div class="inner"><h2 is-upgraded="" class="step-title">4. Contribuyendo al proyecto: Parte 2</h2>
+        <p>En este momento debe contar con la retroalimentación realizada por el equipo automático acerca de la validez de su contribución. Como se mencionó anteriormente, en caso de que su contribución haya sido rechazada, la causa del rechazo estará dada porque incumple con alguna de las siguientes condiciones:</p>
+<ul>
+<li>Únicamente se aceptan archivos con las extensiones <strong><em>.html</em></strong>, <strong><em>.png</em></strong> y <strong><em>.jpg</em></strong></li>
+<li>La única operación aceptada sobre archivos es agregar nuevos archivos (<strong><em>added</em></strong>).</li>
+<li>En el caso de archivos con extensión <strong><em>.html</em></strong> deben contar dentro de su estructura con los siguientes elementos mínimos y propiedades:</li>
+</ul>
+<table>
+<tbody><tr><td colspan="1" rowspan="1"><p><strong>Elemento</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Caracteristicas</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Elemento 1</p>
+</td><td colspan="1" rowspan="1"><ul>
+<li>Es un tag <strong><em>h1.</em></strong></li>
+<li>Debe contar con el Id  <strong><em>"titulo".</em></strong></li>
+<li>El atributo <strong><em>textContent </em></strong>debe existir.</li>
+</ul>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Elemento 2</p>
+</td><td colspan="1" rowspan="1"><ul>
+<li>Es un tag <strong><em>img.</em></strong></li>
+<li>Debe contar con el Id <strong><em>"imagen".</em></strong></li>
+<li>El atributo <strong><em>src</em></strong> debe existir.</li>
+</ul>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Elemento 3</p>
+</td><td colspan="1" rowspan="1"><ul>
+<li>Es un tag <strong><em>a</em></strong>.</li>
+<li>Debe contar con el Id <strong><em>"enlace".</em></strong></li>
+<li>Los atributos <strong><em>href </em></strong>y <strong><em>textContent </em></strong>deben existir<strong>.</strong></li>
+</ul>
+</td></tr>
+</tbody></table>
+<p>Al ser rechazada su petición de validación, el equipo automático dejará un comentario indicando el archivo que está causando el rechazo y la causa del mismo. Partiendo de esto, es posible realizar las correcciones pertinentes, realizar <strong><em>commit </em></strong>y <strong><em>push </em></strong>a su fork desde su repositorio local para actualizar la petición de validación (<strong><em>pull request</em></strong>), y de esta forma esperar una nueva revisión y posible aprobación por parte del equipo automático.</p>
+
+
+      </div></div></google-codelab-step></div><div id="controls"><div id="fabs"><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#" id="previous-step" title="Previous step">Back</a><div class="spacer"></div><a href="https://misovirtual.virtual.uniandes.edu.co/codelabs/git_web_practice_pr/#" id="next-step" title="Next step" hidden="">Next</a><a href="https://misovirtual.virtual.uniandes.edu.co/" id="done" title="Codelab complete">Done</a></div></div></div></google-codelab>
+
+  <script src="./21carvajal_files/native-shim.js.download"></script>
+  <script src="./21carvajal_files/custom-elements.min.js.download"></script>
+  <script src="./21carvajal_files/prettify.js.download"></script>
+  <script src="./21carvajal_files/codelab-elements.js.download"></script>
+
+
+
+</body></html>
